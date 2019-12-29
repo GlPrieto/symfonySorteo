@@ -1,0 +1,25 @@
+{# templates/sorteo/menu.html.twig #}
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+ <title>{% block titulo %}Aplicatión de prueba{% endblock %}</title>
+ </head>
+ <body>
+    <div id="sidebar">
+        {% block sidebar %}
+            <h2>Menu</h2>
+            <ul>
+                <li {% if seccionActual == "inicio" %}class=”actual”{% endif %}><a href="/">Inicio</a></li>
+                <li {% if seccionActual == "numero" %}class=”actual”{% endif %}><a href="/sorteo/numero">Número</a></li>
+            </ul>
+        {% endblock %}
+    </div>
+    <div id="contenido">
+       {% block contenido %}
+        <h2>Estás es en: </h2>
+        <p>{{seccionActual}} </p>
+       {% endblock %}
+    </div>
+ </body>
+</html>

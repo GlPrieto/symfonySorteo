@@ -1,0 +1,28 @@
+{# templates/ejercicio53/estructuraBase.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block titulo %}Aplicatión de prueba{% endblock %}</title>
+    </head>
+    <body>
+        <div id="sidebar">
+            {% block sidebar %}
+            <h1 style="text-align:center;">Euromill&oacuten</h1>
+            <h2>Estás es en: </h2>
+            <p>{{seccionActual}} </p>
+                <h2>Menu</h2>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/sorteo/euromillones">Número</a></li>
+                    </ul>
+                    <h3 style="text-align: center">Boleto ganador</h3>
+                    <p style="text-align: center">{{numero1}} {{numero2}} {{numero3}} {{numero4}} {{numero5}}</p>
+            {% endblock %}
+        </div>
+
+        <div id="contenido">
+            {% block contenido %}{% endblock %}
+        </div>
+    </body>
+</html>

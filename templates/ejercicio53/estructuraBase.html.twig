@@ -1,0 +1,25 @@
+{# templates/ejercicio53/estructuraBase.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block titulo %}Aplicatión de prueba{% endblock %}</title>
+    </head>
+
+    <body>
+        <div id="sidebar">
+            {% block sidebar %}
+            <h1>Bienvenido</h1>
+            <h2>Estás es en: </h2>
+            <p>{{seccionActual}} </p>
+                <h2>Menu</h2>
+                    <a href="/">Inicio</a>
+                    <a href="/sorteo/euromillones">Número</a>
+            {% endblock %}
+        </div>
+
+        <div id="contenido">
+            {% block contenido %}{% endblock %}
+        </div>
+    </body>
+</html>

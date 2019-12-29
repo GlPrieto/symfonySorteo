@@ -1,0 +1,17 @@
+ 
+{# templates/sorteo/menu.html.twig #}
+<h2>Menu</h2>
+<ul>
+    <li {% if seccionActual == "inicio" %}class="actual"{% endif %}>
+        <a href="{{ path('app_ejercicio53') }}">Inicio</a>
+    </li>
+    <li {% if seccionActual == "numero" %}class="actual"{% endif %}>
+        <a href="{{ path('app_numero_sorteo') }}">Número</a>
+    </li>
+    <li {% if seccionActual == "euromillones" %}class="actual"{% endif %}>
+        <a href="{{ path('app_ejercicio54') }}">Euromillones</a>
+    </li>
+    <li {% if seccionActual == "nuevaApuesta" %}class="actual"{% endif %}>
+        <a href="{{ path('app_nueva_apuesta') }}">Nueva Apuesta</a>
+    </li>
+</ul>
